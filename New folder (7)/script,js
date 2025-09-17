@@ -1,0 +1,27 @@
+// Placeholder headlines (replace with API data later)
+const headlines = [
+    "Global markets rally as tech stocks surge",
+    "Breakthrough in renewable energy technology announced",
+    "Major sports event postponed due to weather",
+    "Scientists discover potential cure for rare disease",
+    "New space mission set to explore Jupiter's moons",
+    "Government unveils new climate action plan",
+    "AI technology revolutionizes healthcare industry"
+];
+
+// Function to get a random headline
+function getRandomHeadline() {
+    const randomIndex = Math.floor(Math.random() * headlines.length);
+    return headlines[randomIndex];
+}
+
+// Function to update the headline on the page
+function updateHeadline() {
+    document.getElementById("headline").textContent = getRandomHeadline();
+}
+
+// Event listener for button click
+document.getElementById("new-headline-btn").addEventListener("click", updateHeadline);
+
+// Show a random headline on page load
+window.onload = updateHeadline;
